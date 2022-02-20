@@ -1,0 +1,445 @@
+
+:root{
+    --first-black-color:#1F1D2C;
+    --second-orange-color: #F1A600;
+    --gris-lg-color: #f9f5f2;
+    --white-color:#fff;
+    --font:'Inter', sans-serif;;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--first-black-color); 
+    color: var(--white-color);
+    font-family: var(--font);
+    font-size: 16px;
+    overflow-x: hidden;
+    
+ 
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+/*_*********** utilitis ***********_*/
+ 
+.title{
+    font-size: 28px;
+    text-align: center;
+    padding: .5rem;
+    margin: .5rem auto;
+}
+
+a{
+    text-transform: none;
+    text-decoration: none;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px; 
+}
+
+.none{
+    display: none;
+}
+
+
+/*_*********** Header ***********_*/
+
+
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding: 1rem;
+    width: 100%;
+    height: 50px;
+    background-color: var(--first-black-color);
+}
+
+header > .container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.menu-btn{
+    border: 0;
+    cursor: pointer;
+    background-color: var(--first-black-color);
+    border: none;
+    right: 0;
+    
+}
+
+.menu-btn svg{
+    fill: var(--white-color);
+}
+
+.menu{
+    position: fixed;
+    left: 0;
+    top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    background-color: var(--first-black-color);
+
+}
+
+.menu.is-active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.menu a{
+    padding: .5rem;
+    font-size: 1.25rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--first-color);
+}
+ 
+.menu a:hover{
+    color: var(--second-orange-color);
+    background-color: #302f3b96 ;
+    
+}
+
+
+
+/*_*********** Home ***********_*/
+
+#home{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    padding: 1rem;
+    /* min-height: 300px; */
+
+    background-image: url("../assets/Vectores/Rectangle 34.svg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 200px;
+
+    z-index: -10;
+
+}
+
+.content-home > *{
+    margin: 1.25rem auto;
+   
+}
+
+.content-home h1{
+    font-size: 42px;
+}
+
+
+.content-home .text-content{
+    width:60vw;
+}
+
+
+.content-home p span{
+    color: var(--second-orange-color);
+}
+
+.content-home .social-icons-wrapper img{
+    width: 28px;
+    margin-left: .5rem;
+}
+
+#home > img{
+    position: absolute;
+    max-width: 50vw;
+    object-fit: cover;
+    right: 1rem;
+    top: 1.5rem;
+    z-index: -1;
+}
+
+/*********************Aboutme**********************/
+
+#aboutme{
+    background-image:url(../assets/Vectores/Rectangle\ 33.svg);
+}
+
+
+#aboutme .text-aboutme{
+    text-align: center;
+    padding: .5rem;
+    margin: .5rem auto;
+    max-width: 650px;
+}
+
+
+.wrapper-aboutme{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 1rem auto;
+    padding: .5rem;
+    max-width: 120px;
+    background-color: whitesmoke;
+    border: solid thin black;
+}
+
+.card p{
+    font-size: 10px;
+    padding: .15rem 0;
+    color: black;
+    font-weight: 600;
+}
+.card h5{
+    color: black;
+}
+
+.card .img-card{
+    max-width: 60px;
+
+}
+
+.wrapper-aboutme:nth-child(3)  div img{
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
+} 
+
+
+
+/*********************Experiencia**********************/
+
+.content-exp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.content-exp > div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: .5rem;
+}
+
+.content-exp > img {
+    margin-right: 1rem;
+}
+
+
+/********************Skills***********************/
+
+
+#skills{
+    background-image: url(../assets/Vectores/Rectangle\ 34-1.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.content-skill{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.content-skill > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.content-skill > div >*{
+    padding: 1rem;
+}
+
+.skill-porcentaje{
+    color: var(--second-orange-color);
+    font-size: 26px;
+}
+
+.text-skill{
+    font-weight: 600;
+}
+
+
+/******************** Portfolio ***********************/
+
+.grid-portfolio{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+    "img-1  ."
+    ".      img-2"
+    "img-3  ."; 
+    padding:  0 1rem ;
+}
+
+.img-1{
+    grid-area: img-1;
+}
+.img-2{
+    grid-area: img-2;
+}
+.img-3{
+    grid-area: img-3;
+}
+.grid-portfolio > *{
+    margin: 1rem auto;
+}
+.img-card-portfolio{
+    background-color: var(--second-orange-color);
+    padding: .5rem;
+}
+
+.img-card-portfolio >img{
+    margin-bottom: -20px;
+}
+
+.card-portfolio p{
+    color: var(--white-color);
+    margin-top: 15px;
+    font-weight: 600;
+
+}
+
+/********************Contatc***********************/
+
+#contact{
+    background-image: url(../assets/Vectores/Rectangle\ 34.svg);
+} 
+
+
+.contact-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 180px;
+}
+.contact-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: .5rem;
+    
+}
+
+.contact-card > *{
+    margin: .25rem;
+}
+
+small > a{
+    color: var(--white-color);
+    font-size: 10px;
+}
+
+/********************Footer***********************/
+
+
+footer{
+    height: 80px;
+    padding: 1.5rem;
+    margin: auto;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+/********************@Media***********************/
+@media screen and (min-width:480px){
+
+    #home{
+       height: 380px;
+       background-size: 350px;
+    }
+}
+
+@media screen and (min-width:580px){
+
+    #home{
+       height: 430px;
+       background-size: 400px;
+    }
+
+    .content-home h1{
+        font-size: 60px;
+    }
+
+   
+}
+
+@media screen and (min-width:680px){
+
+    #home{
+       height: 500px;
+       background-size: 500px 450px;
+    }
+
+    .content-home .social-icons-wrapper img{
+        width: 38px;
+    }
+}
+
+
+@media screen and (min-width:900px){
+    .menu-btn{
+        display: none;
+    }
+
+    .menu{
+        position: static;
+        width: auto;
+        flex-direction: row;
+        opacity: 1;
+        pointer-events: auto;
+
+    }
+
+    .menu a{
+        padding: 0.1rem ;
+        margin-right: 0.5rem;
+        font-size: 16px;
+
+    }
+
+    .menu a:hover{
+        background-color: transparent;
+    }
+
+    .content-home h1{
+        font-size:70px;
+    }
+
+    .content-home p{
+        font-size: 24px;
+    }
+
+}
